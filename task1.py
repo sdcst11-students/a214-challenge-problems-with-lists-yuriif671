@@ -17,10 +17,19 @@ number: the number to be rounded
 digits: optional. The number of decimal places to keep
 round(103.2221,2) -> 103.22
 """
-
+total = 0 
 openBalance = 1000
+
+"""I think this one has incorrect examples or I misread the instrucitons"""
+
 deposits = [200,200,200,200,200,200,200,200,200,200,200,200]            # final: 3328.8
 #deposits = [500,1000,300,-250,500,185,-500,205,1200,-550,125,200]      # final: 3887.71
 #deposits = [1000,542,221.52,983,29.75,-10,982.23,10988,287,198,32,100]  # final: 16702.93
 
-    
+
+for i in deposits:
+    openBalance += i
+
+    total += openBalance * 0.005
+
+print(round(total))
